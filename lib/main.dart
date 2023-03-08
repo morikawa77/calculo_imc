@@ -7,7 +7,7 @@ import 'package:flutter/foundation.dart';
 // web friendly check for apple based platforms
 bool isCupertino() => !kIsWeb && (Platform.isIOS || Platform.isMacOS);
 
-String helloText = "Hello World";
+String helloText = "Hello World - teste";
 
 void main() {
   runApp(App());
