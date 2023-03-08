@@ -7,7 +7,7 @@ import 'package:flutter/foundation.dart';
 // web friendly check for apple based platforms
 bool isCupertino() => !kIsWeb && (Platform.isIOS || Platform.isMacOS);
 
-String helloText = "Hello World";
+String helloText = "Hello World!";
 
 void main() {
   runApp(App());
@@ -29,7 +29,7 @@ class App extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       // theme: ThemeData.dark(),
       theme: ThemeData(
-        primarySwatch: Colors.green,
+        primarySwatch: Colors.purple,
       ),
       home: Scaffold(
         appBar: AppBar(
