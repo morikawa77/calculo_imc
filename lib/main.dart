@@ -10,31 +10,54 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        primarySwatch: Colors.yellow,
+        primarySwatch: Colors.green,
       ),
       home: Scaffold(
         appBar: AppBar(
-          title: Icon(Icons.share),
+          title: Text('Cálculo de IMC'),
         ),
-        body: ListView(
-          scrollDirection: Axis.horizontal,
+        body: Column(
           children: [
-            Container(
-              color: Colors.blue,
-              width: 200,
+            Flexible(
+              flex: 1,
+              child: Container(
+                margin: EdgeInsets.all(10),
+                child: Column(
+                  children: [
+                    TextField(
+                      decoration: InputDecoration(
+                        labelText: 'Peso:'
+                      ),
+                    ),
+                    TextField(
+                      decoration: InputDecoration(
+                        labelText: 'Altura:'
+                      ),
+                    ),
+                    ElevatedButton(
+                      onPressed: (){}, 
+                      child: Text('Calcular'),
+                    ),
+                  ]
+                ),
+              ),
             ),
-            Container(
-              color: Colors.red,
-              width: 200,
-            ),
-            Container(
-              color: Colors.green,
-              width: 200,
-            ),
-            Container(
-              color: Colors.yellow,
-              width: 200,
-            ),
+            Flexible(
+              flex: 2,
+              child: Container(
+                color: Colors.red,
+                margin: EdgeInsets.fromLTRB(10,0,10,10),
+                child: FittedBox(
+                  fit: BoxFit.fitHeight,
+                  alignment: Alignment.center,
+                  child: Image.asset(
+                      'images/ideal.jpg', 
+                      width: 100, 
+                      height: 100,
+                    ),
+                  ),
+                ),
+              ),
           ],
         ),
       ),
