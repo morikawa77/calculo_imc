@@ -10,35 +10,36 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        primarySwatch: Colors.green,
+        primarySwatch: Colors.blue,
       ),
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Cálculo de IMC'),
+          title: Icon(Icons.share),
         ),
         body: Column(
           children: [
             Flexible(
               flex: 1,
               child: Container(
+                // color: Colors.blue,
                 margin: EdgeInsets.all(10),
                 child: Column(
                   children: [
                     TextField(
                       decoration: InputDecoration(
-                        labelText: 'Peso:'
+                        labelText: "Peso"
                       ),
                     ),
                     TextField(
                       decoration: InputDecoration(
-                        labelText: 'Altura:'
+                        labelText: "Altura"
                       ),
                     ),
                     ElevatedButton(
-                      onPressed: (){}, 
-                      child: Text('Calcular'),
+                      onPressed: (){},
+                      child: Text("Calcular"),
                     ),
-                  ]
+                  ],
                 ),
               ),
             ),
@@ -46,18 +47,10 @@ class App extends StatelessWidget {
               flex: 2,
               child: Container(
                 color: Colors.red,
-                margin: EdgeInsets.fromLTRB(10,0,10,10),
-                child: FittedBox(
-                  fit: BoxFit.fitHeight,
-                  alignment: Alignment.center,
-                  child: Image.asset(
-                      'images/ideal.jpg', 
-                      width: 100, 
-                      height: 100,
-                    ),
-                  ),
-                ),
+                margin: EdgeInsets.all(10),
+                child: Image.asset('images/ideal.jpg'),
               ),
+            ),
           ],
         ),
       ),
